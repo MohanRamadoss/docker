@@ -86,8 +86,11 @@ docker start ff56768fe34d
 #################################
 
 docker rmi centos-tomcat9:latest
+
 docker images -a
+
 docker rmi mohan:latest
+
 docker images -a
 
 
@@ -141,4 +144,6 @@ cd centos-tomcat9
 docker build -t mohan:centos-tomcat9 .
 
 docker run -v /opt/tomcat/webapps:/opt/tomcat/webapps -v /opt/tomcat/logs:/opt/tomcat/logs -p 8080:8080  -p 8009:8009 -i -t --name tomcat9  mohan:centos-tomcat9
+
+
 #################################
