@@ -5,6 +5,11 @@ Tomcat9 on CentOS 7
 
 git init
 
+
+git remote add origin https://github.com/MohanRamadoss/docker.git 
+
+git pull  https://github.com/MohanRamadoss/docker.git
+
 git add --all :/
 
 git status
