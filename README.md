@@ -99,14 +99,18 @@ docker build -t mohanreverseproxy:php7 .
 docker run -dt -p 80:80 -p 443:443 -e PROXY_GATEWAY="/" -e PROXY_DESTINATION="http://192.168.1.21:8080" --name="reverse-proxy" mohanreverseproxy:php7
 
 
-Apache webserver 
+#####Apache webserver#####
 
 docker build -t mohanapache:reverse .
+
 docker run -dt -p 80:80 -p 443:443  --name="reverse-proxy" mohanapache:reverse
 
 
-tomcat 9
+#####tomcat 9#######
+
 cd centos-tomcat9
+
 docker build -t mohan:centos-tomcat9 .
+
 docker run -v /opt/tomcat/webapps:/opt/tomcat/webapps -v /opt/tomcat/logs:/opt/tomcat/logs -p 8080:8080  -p 8009:8009 -i -t --name tomcat9  mohan:centos-tomcat9
 
