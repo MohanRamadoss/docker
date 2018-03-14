@@ -1,6 +1,7 @@
-==================================
+
 Tomcat9 on CentOS 7
-==================================
+
+
 docker build -t mohan:centos-tomcat9 .
 groupadd tomcat
 useradd tomcat 
