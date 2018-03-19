@@ -22,6 +22,23 @@ git commit -m 'message'
 git push -u origin master
 
 
+###########################################
+
+  Docker nginx simple web server 
+
+
+
+    docker build -t="mohannginx/centos-nginx:v2" .
+
+    docker images
+
+    docker run -p 80:80 -i -t --name nginxv2 mohannginx/centos-nginx:v2
+
+    docker start nginxv2
+
+
+
+
 
 #################################
 
