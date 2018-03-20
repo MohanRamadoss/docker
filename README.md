@@ -27,16 +27,37 @@ git push -u origin master
   Docker nginx simple web server 
 
 
-
     docker build -t="mohannginx/centos-nginx:v2" .
-
+    
     docker images
-
+    
     docker run -p 80:80 -i -t --name nginxv2 mohannginx/centos-nginx:v2
-
+    
     docker start nginxv2
+    
+    docker exec -it nginxv2 bash
+	
+    
 
+    docker build -t="mariadbv1/centos-mariadb:v1" .
+    
+    docker images
+    
+    docker run -p 3306:3306 -i -t --name mariadbv1 mariadbv1/centos-mariadb:v1
+    
+    docker start mariadbv1 
 
+    docker exec -it mariadbv1 bash
+	
+	
+
+    goinside(){
+
+    docker exec -it $1 bash -c "stty cols $COLUMNS rows $LINES && bash";
+    
+     }
+   
+     export -f goinside
 
 
 
